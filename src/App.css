@@ -9,36 +9,52 @@
   --accent: #38bdf8;        /* สีฟ้า */
 }
 
+/* src/App.css */
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap');
+
+/* กำหนดตัวแปรสีสำหรับแต่ละธีม */
+.theme-midnight {
+  --bg-dark: #0f172a;
+  --bg-card: #1e293b;
+  --text-main: #ffffff;
+  --text-muted: #94a3b8;
+  --accent: #38bdf8; /* สีฟ้า */
+  --gradient: linear-gradient(135deg, #3b82f6, #2563eb);
+}
+
+.theme-sunset {
+  --bg-dark: #2a1b1b;
+  --bg-card: #452626;
+  --text-main: #ffffff;
+  --text-muted: #d6bcbc;
+  --accent: #fb923c; /* สีส้ม */
+  --gradient: linear-gradient(135deg, #f97316, #ea580c);
+}
+
+.theme-forest {
+  --bg-dark: #102820;
+  --bg-card: #1c3d32;
+  --text-main: #ffffff;
+  --text-muted: #9ca3af;
+  --accent: #4ade80; /* สีเขียว */
+  --gradient: linear-gradient(135deg, #22c55e, #16a34a);
+}
+
+/* ใช้ตัวแปรที่ประกาศไว้ */
 body {
   background-color: var(--bg-dark);
   color: var(--text-main);
   font-family: 'Kanit', sans-serif;
-  overflow-x: hidden;
+  transition: background-color 0.3s ease; /* เปลี่ยนสีนุ่มๆ */
 }
 
-/* แก้สี Input ให้พิมพ์แล้วเห็นตัวหนังสือ */
-.form-control {
-  color: #fff !important; 
-  background-color: rgba(255, 255, 255, 0.1) !important;
-  border: 1px solid rgba(255, 255, 255, 0.2) !important;
-}
-.form-control::placeholder {
-  color: rgba(255, 255, 255, 0.5) !important;
-}
-
-/* แก้สีตัวหนังสือจางๆ ของ Bootstrap ให้สว่างขึ้น */
-.text-muted {
-  color: var(--text-muted) !important;
-}
-
-/* การ์ดข้อมูล */
 .dashboard-card {
   background-color: var(--bg-card);
+  color: var(--text-main);
   border-radius: 16px;
   padding: 24px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-  height: 100%;
-  color: white; /* บังคับตัวหนังสือในการ์ดเป็นสีขาว */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
 }
 
 /* ไอคอน */
@@ -53,4 +69,18 @@ body {
   color: var(--accent);
   font-size: 1.5rem;
   margin-bottom: 10px;
+}
+/* แก้สี Input ให้พิมพ์แล้วเห็นตัวหนังสือ */
+.form-control {
+  color: #fff !important; 
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+.form-control::placeholder {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+/* แก้สีตัวหนังสือจางๆ ของ Bootstrap ให้สว่างขึ้น */
+.text-muted {
+  color: var(--text-muted) !important;
 }
