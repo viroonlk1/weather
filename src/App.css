@@ -1,0 +1,56 @@
+/* src/App.css */
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap');
+
+:root {
+  --bg-dark: #0f172a;       /* พื้นหลังหลัก */
+  --bg-card: #1e293b;       /* พื้นหลังการ์ด */
+  --text-main: #ffffff;     /* สีขาวจั๊วะ */
+  --text-muted: #94a3b8;    /* สีเทาอ่อน (อ่านง่ายบนพื้นดำ) */
+  --accent: #38bdf8;        /* สีฟ้า */
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  font-family: 'Kanit', sans-serif;
+  overflow-x: hidden;
+}
+
+/* แก้สี Input ให้พิมพ์แล้วเห็นตัวหนังสือ */
+.form-control {
+  color: #fff !important; 
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+.form-control::placeholder {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+/* แก้สีตัวหนังสือจางๆ ของ Bootstrap ให้สว่างขึ้น */
+.text-muted {
+  color: var(--text-muted) !important;
+}
+
+/* การ์ดข้อมูล */
+.dashboard-card {
+  background-color: var(--bg-card);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  height: 100%;
+  color: white; /* บังคับตัวหนังสือในการ์ดเป็นสีขาว */
+}
+
+/* ไอคอน */
+.icon-box {
+  background: rgba(56, 189, 248, 0.1);
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  color: var(--accent);
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}

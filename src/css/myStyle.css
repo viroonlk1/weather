@@ -1,0 +1,37 @@
+.item-list{
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 40px;
+
+}
+.item-list li{
+    background: #fcfcfc;
+    padding: 15px;
+    box-shadow: 1px 3px rgba(0,0,0,0.12);
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+.bar{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    display: inline-block;
+    border: none;
+    background: #ccc;
+    vertical-align: top;
+}
+.top-bar{
+    width: 100%;
+    background: #4e83ee;
+}
+.side-bar{
+    width: 30%;
+    background: rgb(97, 228, 228);
+}
+.mid-bar{
+    width: 40%;
+    background: rgb(224, 148, 148);
+}
